@@ -92,7 +92,7 @@ const webpackConfig = {
     },
     plugins: [
         new webpack.optimize.CommonsChunkPlugin({
-            names: ['app', 'vendor', 'manifest'],
+            names: ['app', 'vendor', 'manifest'],  // creating manifest.js 
             minChunks: Infinity
         }),
         new webpack.DefinePlugin(config.get('globals')),
