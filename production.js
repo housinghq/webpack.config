@@ -22,7 +22,7 @@ if (!branch) {
   console.log('Required: BRANCH_NAME environment variable');
 }
 webpackConfig.recordsPath = path.resolve(__dirname,
-  `../../tmp/webpack_config/${branch.replace(/[/.@]/g, '-')}/webpack-records.json`);
+  `../../tmp/webpack_config/${branch.replace(/[/.@]/g, '-')}/webpack-records.json`);  // long term caching of assets, so that one chunk doesn't change the hash of other on compliation
 
 webpackConfig.output.filename = '[name].[chunkhash].js';
 webpackConfig.output.chunkFilename = '[name].[chunkhash].js';
